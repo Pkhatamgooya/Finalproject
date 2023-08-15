@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/styles.css" />
+
+  <script src="https://kit.fontawesome.com/ea0b1efcd6.js" crossorigin="anonymous"></script>
+
+  <title>Daily Weather Watch</title>
+</head>
+
+<body>
+  <div class="container"></div>
+  <h1 class="web-name">
+    Daily Weather Watch <br />
+    ⛅️
+  </h1>
+  <form id="search-form">
+
+    <input type="text" placeholder="Enter a city" autocomplete="off" autofocus="on" id="search-text-input" />
+
+    <input type="submit" value="Search" />
+  </form>
+
+  <h2 class="recently">Recently Searched...</h2>
+
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"> New York</h5>
+          <p class="temperature" id="temperature">
+            <strong> 75 ° F</strong>
+
+          </p>
+
+          <p class="sun">☀️</p>
+          <p class="card-text">
+          <div class="row">
+            <div class="col-md-3">Today <br>
+              ☀️ 75° F
+            </div>
+            <div class="col-md-3">Monday <br>
+              🌤 74° F
+
+            </div>
+            <div class="col-md-3">Tuesday <br>
+              🌥 71° F
+
+            </div>
+            <div class="col-md-3"> Wednesday <br>
+              🌧 56° F
+            </div>
+            <div class="col-md-3"> Thursday <br>
+              🌦 60° F
+
+            </div>
+            <div class="col-md-3"> Friday <br>
+              ⛅️ 72° F
+
+            </div>
+            <div class="col-md-3"> Saturday <br>
+              🌤 85° F
+            </div>
+            <div class="col-md-3"> Sunday <br>
+              ☀️ 89° F
+
+            </div>
+            <div class="col-md-3"> Next Week <br>
+              <button type="info" class="btn btn-info">click here for more information</button>
+            </div>
+
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 id="result"> Tokyo </h5>
+          <p class="temperature2">
+            <strong> 61 ° F </strong>
+          </p>
+          <p class="cloud">☁️</p>
+          <p class="card-text">
+          <div class="row">
+            <div class="col-md-3">Today <br>
+              ☁️ 61° F
+            </div>
+            <div class="col-md-3"> Monday <br>
+              🌧 63° F
+            </div>
+            <div class="col-md-3">Tuesday <br>
+              🌦 64° F
+
+            </div>
+            <div class="col-md-3"> Wednesday <br>
+              🌤 65° F </div>
+            <div class="col-md-3"> Thursday <br>
+              🌤 70° F
+
+            </div>
+            <div class="col-md-3"> Friday <br>
+              ☀️ 75°F
+
+            </div>
+            <div class="col-md-3"> Saturday <br>
+              ☀️ 78° F
+
+            </div>
+            <div class="col-md-3"> Sunday <br>
+              🌤 76° F
+
+            </div>
+            <div class="col-md-3"> Next Week <br>
+              <button type="info" class="btn btn-info">click here for more information</button>
+
+            </div>
+          </div>
+
+          </p>
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="src/script.js">
+  </script>
+</body>
+
+</html>
