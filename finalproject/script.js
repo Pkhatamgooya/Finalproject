@@ -59,7 +59,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#search-text-input").innerHTML = response.data.name;
   var temperatureInFahrenheit = Math.round(response.data.main.temp);
   document.querySelector(".temperature2").innerHTML =
-    temperatureInFahrenheit + "°F";
+    temperatureInFahrenheit + " °F";
 }
 function search(event) {
   event.preventDefault();
@@ -81,3 +81,11 @@ function search(event) {
 }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
+
+//bonus feature
+
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let temperature = temperatureElement.innerHTML;
+}
