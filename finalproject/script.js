@@ -59,7 +59,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#search-text-input").innerHTML = response.data.name;
   var temperatureInFahrenheit = Math.round(response.data.main.temp);
   document.querySelector(".temperature2").innerHTML =
-    temperatureInFahrenheit + "°F";
+    temperatureInFahrenheit + "° F";
 }
 function search(event) {
   event.preventDefault();
