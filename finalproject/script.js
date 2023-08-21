@@ -73,8 +73,6 @@ function search(event) {
     let units = "imperial";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(displayWeatherCondition);
-
-    console.log(axios);
   } else {
     alert("Please enter a city");
   }
