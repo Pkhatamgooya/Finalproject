@@ -87,3 +87,29 @@ function convertToFahrenheit(event) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = temperatureElement.innerHTML;
 }
+ getWeatherData()
+function getWeatherData(){
+  navigator.geolocation.getCurrentPosition((success)) => {
+let apiKey = "07a169e48319faaa208f601f0a8a20b3";
+let(latitude,longitude) = success.coords;
+fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=imperial&appid=${apiKey}`).then(res =>JSON()).then(data => {
+ console.log(data)
+ showWeatherData(data);
+ })
+}
+}
+function showWeatherData(data){
+ let{humidity, pressure, sunrise, sunset, wind_speed} = data.current;
+ currentWeatherItemsEl.innerHTML =
+ <div class="weather-item">
+   <div>Humidity</div>
+  <div>${humidity}%</div>
+ </div>
+  <div>Pressure</div>
+  <div>${pressure}</div>
+ </div>
+ <div class="weather-item">
+  <div>Wind Speed</div>
+  <div>${wind_speed}</div>
+ </div>;
+}
